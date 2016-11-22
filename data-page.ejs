@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>EJS page</title>
+        <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <h1> <%= addresses %></h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Street</th>
+          <th>Address</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for(var i=0; i<addresses.length; i++) {%>
+                <tr>
+                  <td><%= addresses[i].street %></td>
+                  <td><%= addresses[i].address %></td>
+                </tr>
+                <% } %>
+      </tbody>
+    </table>
+
+  </body>
+</html>
